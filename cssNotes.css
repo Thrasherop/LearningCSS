@@ -1,0 +1,92 @@
+/* syntax: 
+
+selector {
+    property: value;
+}
+*/
+
+
+/* select by class: */
+
+.class-name{
+    color: red;
+}
+
+
+/* select by id: */
+#id {
+    color: red;
+}
+
+/* select by tag: */
+h1 {
+    color: red;
+}
+
+/* you can select using multiple specifiers
+    This one does all h1 with the class "class-name" */
+
+
+h1.class-name{
+    color: red;
+}
+
+/*
+    You can do multiple selections inside the html (seperated by a space)
+     like this:
+
+    <h1 class="class-name other-class">
+        <p>
+            This is a paragraph
+        </p>
+        </h1>
+
+    this will select all h1 with the class "class-name" and all h1 with the class "other-class"
+
+*/
+
+
+/*
+ selector combinations
+
+ */
+
+ .ancestor .child {
+     color: red;
+ }
+
+ /* ie: 
+    this will select all p tags that have an
+    ancestor with div
+ */
+
+ div p {
+        color: red;
+ }
+
+
+
+ /*
+
+ ypu can select via combinations
+
+
+so if you have .big and .large that both need
+the property "color: red;" you can do this:
+
+ */
+
+ .big, .large {
+     color: red;
+ }
+
+
+ /*
+ lastly, the everything selector (the * selector)
+
+ this is usually used to set  defaults
+ */
+
+* {
+    color: red;
+}
